@@ -1,0 +1,37 @@
+#header{
+    background-color:rgb(223, 223, 223);
+    color: black;
+    padding: 10px;
+    margin-bottom:20px;
+}
+
+#header h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    margin:0px;
+}
+
+#header h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+}
+
+th{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+td{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.btn-danger, .btn-primary{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.table td, .table th{
+    vertical-align: middle;
+}
