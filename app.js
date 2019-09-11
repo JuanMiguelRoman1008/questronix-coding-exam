@@ -19,7 +19,14 @@ const db = mysql.createConnection({
 
 //Routes
 app.get('/', (req, res) => {
-    res.render('pages/index');
+    let sql = 'SELECT * FROM  items';
+    let query = db.query(sql, (err, result) =>{
+        if (err) throw err;
+        res.render('pages/index', {
+            data:result
+        });
+    }); 
+    
 });
 
 
