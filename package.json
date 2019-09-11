@@ -1,0 +1,19 @@
+{
+  "name": "questronix-coding-exam",
+  "version": "1.0.0",
+  "description": "A CRUD application built with NodeJS, Express and EJS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanMiguelRoman1008/questronix-coding-exam.git"
+  },
+  "author": "Juan Miguel Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanMiguelRoman1008/questronix-coding-exam/issues"
+  },
+  "homepage": "https://github.com/JuanMiguelRoman1008/questronix-coding-exam#readme"
+}
