@@ -17,6 +17,11 @@ const db = mysql.createConnection({
     database:'inventory'
 });
 
+app.configure(function(){
+    app.use(express.bodyParser());
+    app.use(app.router);
+  });
+
 //Routes
 
 //Homepage
