@@ -20,8 +20,6 @@ const db = mysql.createConnection({
 app.use(bodyParser.urlencoded({ extended: false }))
 
 //Routes
-
-//Homepage
 app.get('/', (req, res) => {
     let sql = 'SELECT * FROM  items';
     let query = db.query(sql, (err, result) =>{
@@ -31,7 +29,7 @@ app.get('/', (req, res) => {
         });
     }); 
 });
-//Create 
+
 app.get('/create', (req, res) => {
     res.render('pages/create');
 });
@@ -50,6 +48,25 @@ app.post('/delete', (req, res) => {
         if (err) throw err;
         res.redirect('/');
     });
+});
+
+app.post('/update', (req, res) => {
+    let sql = 'SELECT * FROM items WHERE id = ?';
+    let query = db.query(sql, req.body.id, (err, result) => {
+        if (err) throw err;
+        res.render('pages/update', {
+            data:result
+        });
+    });
+});
+
+app.post('/updateinfo', (req, res) => {
+    let sql = 'UPDATE items SET ? WHERE id = ?'
+    let query = db.query(sql, [req.body,req.body.id], (err, result) => {
+        if (err) throw err;
+        res.redirect('/');
+    });
+    
 });
 
 db.connect((err) => {

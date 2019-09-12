@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/header %>
+        <div class="form">
+            
+            <br><br>
+            <form action="/updateinfo" method="POST">
+                <div class="inputs">
+                    <h3>UPDATE ITEM </h3>
+                    <br><br>
+                    NAME:<br>
+                    <input type="text" name="name" value="<%= data[0].name %>" required>
+                    <br>
+                    QUANTITY:<br>
+                    <input name="qty" value="<%= data[0].qty %>"  type="number" min="0" required>
+                    <br>
+                    AMOUNT:<br>
+                    <input name="amount" value="<%= data[0].amount %>"  type="number" min="0" required>
+                    <input name="id" value="<%= data[0].id %>"  type="hidden" required>
+                    <br><br>
+                    <a class="btn btn-secondary type="button" href="/">CANCEL</a>
+                    <input class="btn btn-success" type="submit" value="SUBMIT">
+                </div>
+                
+            </form>  
+        </div>
+    </body>
+</html>
