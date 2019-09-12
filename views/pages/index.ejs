@@ -41,7 +41,10 @@
                                 </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
-                                      <button type="button" class="btn btn-danger">DELETE</button>
+                                      <form action="/delete" method="POST">
+                                            <input type="hidden" name="id" value="<%= data.id %>">
+                                            <input class="btn btn-danger" type="submit" value="DELETE">
+                                      </form>
                                     </div>
                                 </div>
                             </div>

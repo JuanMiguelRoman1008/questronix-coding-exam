@@ -44,6 +44,13 @@ app.post('/create', (req, res) => {
     });
 });
 
+app.post('/delete', (req, res) => {
+    let sql = 'DELETE FROM items WHERE id = ?';
+    let query = db.query(sql, req.body.id, (err, result) => {
+        if (err) throw err;
+        res.redirect('/');
+    });
+});
 
 db.connect((err) => {
     if(err) throw err;
