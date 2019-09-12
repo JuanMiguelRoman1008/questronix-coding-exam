@@ -27,8 +27,9 @@ td{
     font-size: 15px;
 }
 
-.btn-danger, .btn-primary, .btn-info, .btn-success{
+.btn-danger, .btn-primary, .btn-info, .btn-success, .btn-secondary{
     font-family: 'Roboto', sans-serif !important;
+    color: white !important;
     font-size: 12px;
 }
 
@@ -69,4 +70,14 @@ a{
     text-align: center;
     margin: 0 auto;
     border: 1px solid rgb(209, 209, 209);
+}
+
+.modal-body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.modal-body h5{
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
 }
