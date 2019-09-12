@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
@@ -17,10 +17,7 @@ const db = mysql.createConnection({
     database:'inventory'
 });
 
-app.configure(function(){
-    app.use(express.bodyParser());
-    app.use(app.router);
-  });
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //Routes
 
@@ -40,8 +37,11 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-    console.log(req.body);
-    res.send('creating user');
+    let sql = 'INSERT INTO items SET ?';
+    let query = db.query(sql, req.body, (err, result) => {
+        if (err) throw err;
+        res.redirect('/');
+    });
 });
 
 
