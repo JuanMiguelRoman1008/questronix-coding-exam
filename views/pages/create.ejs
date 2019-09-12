@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <% include ../partials/head %>
+    </head>
+    <body>
+        <% include ../partials/header %>
+        <div class="form">
+            
+            <br><br>
+            <form action="/create" method="POST">
+                <div class="inputs">
+                    <h3>ADD ITEM</h3>
+                    <br><br>
+                    NAME:<br>
+                    <input type="text" name="name" placeholder="Item..." required>
+                    <br>
+                    QUANTITY:<br>
+                    <input name="qty" placeholder="Quantity..."  type="number" min="0" required>
+                    <br>
+                    AMOUNT:<br>
+                    <input name="amount" placeholder="Amount..."  type="number" min="0" required>
+                    
+                    <br><br>
+                    <input class="btn btn-success" type="submit" value="SUBMIT">
+                </div>
+                
+            </form>  
+        </div>
+    </body>
+</html>

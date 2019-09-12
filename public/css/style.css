@@ -27,11 +27,46 @@ td{
     font-size: 15px;
 }
 
-.btn-danger, .btn-primary{
-    font-family: 'Roboto', sans-serif;
+.btn-danger, .btn-primary, .btn-info, .btn-success{
+    font-family: 'Roboto', sans-serif !important;
     font-size: 12px;
 }
 
 .table td, .table th{
     vertical-align: middle;
+    border-bottom: 1px solid #dee2e6
+}
+
+.create{
+    text-align: center;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.form{
+    text-align: center;
+    margin:0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form h3{
+    color:white;
+    display:inline-block; 
+    border: 8px solid rgb(71, 71, 71);
+    background-color:rgb(71, 71, 71);
+    font-size: 20px;
+}
+
+.inputs{
+    padding:50px;
+    width:30%;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid rgb(209, 209, 209);
 }

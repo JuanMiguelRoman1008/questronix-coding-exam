@@ -22,11 +22,14 @@
                             <td><%= data.name %></td>
                             <td><%= data.qty %></td>
                             <td><%= data.amount %></td>
-                            <td><button type="button" class="btn btn-primary">UPDATE</button></td>
-                            <td><button type="button" class="btn btn-danger">DELETE</button></td>
+                            <td><a href="/" class="btn btn-primary">UPDATE</a></td>
+                            <td><a href="/" class="btn btn-danger">DELETE</a></td>
                         </tr>
                 <% }); %>
             </tbody>
         </table>
+        <div class="create">
+            <a href="/create" class="btn btn-info">ADD ITEM</a>
+        </div>
     </body>
 </html>

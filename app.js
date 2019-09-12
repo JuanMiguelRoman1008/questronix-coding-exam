@@ -18,6 +18,8 @@ const db = mysql.createConnection({
 });
 
 //Routes
+
+//Homepage
 app.get('/', (req, res) => {
     let sql = 'SELECT * FROM  items';
     let query = db.query(sql, (err, result) =>{
@@ -26,9 +28,16 @@ app.get('/', (req, res) => {
             data:result
         });
     }); 
-    
+});
+//Create 
+app.get('/create', (req, res) => {
+    res.render('pages/create');
 });
 
+app.post('/create', (req, res) => {
+    console.log(req.body);
+    res.send('creating user');
+});
 
 
 db.connect((err) => {
